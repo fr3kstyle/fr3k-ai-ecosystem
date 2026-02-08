@@ -31,7 +31,7 @@ Build a production-ready, always-on AI agent system that:
 │ • Relay      │      │ • memU       │      │ • Fabric     │
 │ • Bot        │      │ • PAI        │      │ • Substrate  │
 │ • Reachout   │      │ • Substrate  │      │ • TELOS      │
-│ • Remote     │      │ • OpenClaw   │      │ • Algorithm  │
+│ • Remote     │      │ • ZAI API    │      │ • Algorithm  │
 └──────────────┘      └──────────────┘      └──────────────┘
         │                     │                     │
         └─────────────────────┼─────────────────────┘
@@ -111,7 +111,7 @@ cd fr3k-ai-ecosystem
 ### Phase 1: Core Infrastructure (15 min)
 1. ✅ Install dependencies (Node.js, Python 3.13, Bun, Docker)
 2. ✅ Install Fabric AI patterns
-3. ✅ Configure OpenClaw with ElevenLabs voice
+3. ✅ Configure ZAI API with ElevenLabs voice
 4. ✅ Setup memU memory system with PostgreSQL
 5. ✅ Configure PAI framework
 
@@ -165,7 +165,6 @@ export TELEGRAM_BOT_TOKEN="your-bot-token"
 # Core services
 fr3k-telegram-relay.service      # Telegram relay
 fr3k-memu-server.service          # Memory backend
-fr3k-openclaw-gateway.service     # OpenClaw gateway
 
 # Agent services
 fr3k-health-agent.service         # Health monitor
@@ -367,7 +366,6 @@ This project integrates multiple open-source frameworks:
 
 Integrated frameworks and their authors:
 - Daniel Miessler: Fabric, PAI, TELOS, TheAlgorithm, Substrate
-- OpenClaw team: OpenClaw gateway
 - memU team: Proactive memory system
 - Claude Code community: Hooks, observability, Telegram integrations
 - All original framework authors
