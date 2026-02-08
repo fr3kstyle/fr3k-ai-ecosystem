@@ -1,0 +1,18 @@
+[Unit]
+Description=Fr3k Telegram Relay - Claude Code Bridge
+After=network.target
+
+[Service]
+Type=simple
+User=fr3k
+WorkingDirectory=/home/fr3k/github/claude-telegram-relay
+Environment="NODE_ENV=production"
+EnvironmentFile=/home/fr3k/github/claude-telegram-relay/.env
+ExecStart=/usr/bin/node /home/fr3k/github/claude-telegram-relay/daemon/index.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

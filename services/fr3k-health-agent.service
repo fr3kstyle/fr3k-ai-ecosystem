@@ -1,0 +1,17 @@
+[Unit]
+Description=Fr3k Health Monitoring Agent
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=fr3k
+WorkingDirectory=/home/fr3k/fr3k-ai-ecosystem/src/agents
+Environment="PATH=/home/fr3k/ai-ecosystem-venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/fr3k/ai-ecosystem-venv/bin/python health_agent.py
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

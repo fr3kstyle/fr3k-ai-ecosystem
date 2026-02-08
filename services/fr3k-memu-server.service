@@ -1,0 +1,18 @@
+[Unit]
+Description=Fr3k memU Memory Server
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=fr3k
+WorkingDirectory=/home/fr3k/fr3k-ai-ecosystem/src/memory/memu-server
+Environment="PATH=/home/fr3k/ai-ecosystem-venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="DATABASE_URL=postgresql://memu:memu_password@localhost:5432/memudb"
+ExecStart=/home/fr3k/ai-ecosystem-venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

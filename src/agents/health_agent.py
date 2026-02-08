@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('/var/log/fr3k-health-agent.log'),
+        logging.FileHandler('/home/fr3k/fr3kstyle-workspace/logs/fr3k-health-agent.log'),
         logging.StreamHandler()
     ]
 )
@@ -149,7 +149,7 @@ def main():
             logger.info(report)
 
             # Save report to file
-            with open('/tmp/fr3k-health-report.txt', 'w') as f:
+            with open('/home/fr3k/fr3kstyle-workspace/logs/fr3k-health-report.txt', 'w') as f:
                 f.write(report)
 
             # Wait before next check
